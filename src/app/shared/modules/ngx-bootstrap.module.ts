@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxBootstrapModule } from './modules/ngx-bootstrap.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
-
-
+// Module to import ngx-bootstrap components
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    NgxBootstrapModule
+    ModalModule.forRoot()
   ],
   exports:[
-    CommonModule
+    ModalModule
   ]
 })
-export class SharedModule { }
+export class NgxBootstrapModule { }
