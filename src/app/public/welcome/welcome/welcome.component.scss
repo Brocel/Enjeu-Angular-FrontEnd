@@ -1,0 +1,26 @@
+/*Welcome grid */
+.welcomeGrid {
+  height: 90%;
+  display: grid;
+  align-items: center;
+  padding: 3%;
+  grid-gap: 1%;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas:
+  "ban ban"
+  "logIn register";
+}
+.ban {
+  grid-area: ban;
+  justify-content: center;
+  text-align: center;
+}
+.logIn {
+  grid-area: logIn;
+  justify-content: center;
+}
+.register {
+  grid-area: register;
+  justify-content: center;
+}

@@ -10,6 +10,9 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     SharedModule
+  ],
+  exports: [
+    RegisterComponent
   ]
 })
 export class RegisterModule { }
