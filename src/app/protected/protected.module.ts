@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { SharedModule } from '@shared/shared.module';
 
 import { ProtectedRoutingModule } from './protected-routing.module';
 import { FeaturesModule } from './features/features.module';
@@ -13,7 +13,7 @@ import { IngameModule } from './ingame/ingame.module';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    SharedModule,
     ProtectedRoutingModule,
     FeaturesModule,
     HomeModule,
