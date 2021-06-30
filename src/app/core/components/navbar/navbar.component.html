@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li>
+        <a *ngIf="!isAuth">Welcome</a>
+      </li>
+      <li>
+        <a *ngIf="isAuth" routerLink="protected/home">Home</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a (click)="onSignOut()"
+           style="cursor:pointer"
+           *ngIf="isAuth">Sign Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
