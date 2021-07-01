@@ -4,6 +4,8 @@ import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
 
 import { AuthenticationService } from '@core/services/authentication.service';
+import { BasicAuthInterceptorService } from '@core/services/basic-auth-interceptor.service';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 
@@ -17,9 +19,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CommonModule,
     PublicModule,
     ProtectedModule,
+    HttpClientModule
   ],
   providers: [
-    AuthenticationService
+    AuthenticationService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: BasicAuthInterceptorService,
+      multi: true
+    }
+
   ],
   exports: [
     NavbarComponent
