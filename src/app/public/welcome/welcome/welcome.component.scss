@@ -1,12 +1,14 @@
 /*Welcome grid */
 .welcomeGrid {
   height: 90%;
+  width: 100%;
   display: grid;
   align-items: center;
+  justify-content: center;
   padding: 3%;
   grid-gap: 1%;
   grid-template-columns: repeat(2,1fr);
-  grid-template-rows: 0,5fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
   "ban ban"
   "logIn register";
