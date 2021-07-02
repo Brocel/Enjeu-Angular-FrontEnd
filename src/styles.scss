@@ -16,6 +16,13 @@ body {
 nav {
   color: white;
 }
+/*Banner background*/
+.bannerBackground {
+  background-image: url("./assets/img/bg_parchemin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
 /*Form background*/
 .formBackground {
   background-image: url("./assets/img/bg_H_board.jpg");

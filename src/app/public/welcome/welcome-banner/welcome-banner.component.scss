@@ -1,0 +1,22 @@
+.bannerGrid{
+  height: 70%;
+  width: 50%;
+  display: grid;
+  align-items: center;
+  padding: 5%;
+  grid-gap: 5%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas:
+  "title"
+  "subTitle";
+}
+.title {
+  grid-area: title;
+  justify-content: center;
+  text-align: center;
+}
+.subTitle {
+  grid-area: subTitle;
+  justify-content: center;
+}
