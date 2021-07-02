@@ -1,0 +1,40 @@
+/*Login grid */
+.loginGrid {
+  height: 90%;
+  width: 70%;
+  display: grid;
+  align-items: center;
+  padding: 5%;
+  grid-gap: 5%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0,5fr repeat(4,1fr);
+  grid-template-areas:
+  "title"
+  "uName"
+  "pwd"
+  "mess"
+  "submitBut";
+}
+.title {
+  grid-area: title;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.uName {
+  grid-area: uName;
+  justify-content: center;
+}
+.pwd {
+  grid-area: pwd;
+  justify-content: center;
+}
+.mess {
+  grid-area: pwd;
+  justify-content: center;
+  text-align: center;
+}
+.submitBut {
+  grid-area: pwd;
+  justify-content: center;
+}

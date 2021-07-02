@@ -13,6 +13,7 @@
       // import environment variables
       "@env/*": ["environments/*"],
       // import assets
+      "@img/*":["assets/img/*"],
       "@ass/*": ["assets/*"]
     },
     "outDir": "./dist/out-tsc",
