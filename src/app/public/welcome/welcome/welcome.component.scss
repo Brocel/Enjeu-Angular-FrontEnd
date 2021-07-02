@@ -14,8 +14,10 @@
   "logIn register";
 }
 .ban {
+  width: 50%;
   grid-area: ban;
   justify-content: center;
+  justify-self: center;
   text-align: center;
 }
 .logIn {
