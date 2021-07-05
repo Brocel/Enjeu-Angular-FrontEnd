@@ -19,6 +19,15 @@ body {
 nav {
   color: white;
 }
+/*Scrollbar behaviour*/
+.scrollBar {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.barInvisible::-webkit-scrollbar {
+  display: none;
+}
 /*Banner background*/
 .bannerBackground {
   background-image: url("./assets/img/bg_parchemin.jpg");

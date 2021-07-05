@@ -1,34 +1,173 @@
-<form class="form-group registerGrid">
+<form
+  class="form-group registerGrid"
+  *ngIf="!isSuccessful"
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()"
+  #f="ngForm"
+  novalidate>
   <h1 class="text-center title">Register</h1>
-
-    <div class="card-body cardBackground fName">
-      fName
+  <div class="card-body cardBackground fName">
+    <label for="firstName">Firstname</label>
+      <input
+        type="text"
+        class="form-control"
+        name="firstName"
+        [(ngModel)]="form.firstName"
+        required
+        minlength="3"
+        maxlength="20"
+        #firstName="ngModel"
+      />
+      <div class="alert-danger" *ngIf="firstName.errors && f.submitted">
+        <div *ngIf="firstName.errors.required">Firstname is required</div>
+        <div *ngIf="firstName.errors.minlength">
+          Firstname must be at least 3 characters
+        </div>
+        <div *ngIf="firstName.errors.maxlength">
+          Firstname must be at most 20 characters
+        </div>
+      </div>
     </div>
     <div class="card-body cardBackground lName">
-      lName
+      <label for="lastName">Lastname</label>
+      <input
+        type="text"
+        class="form-control"
+        name="lastName"
+        [(ngModel)]="form.lastName"
+        required
+        minlength="3"
+        maxlength="20"
+        #lastName="ngModel"
+      />
+      <div class="alert-danger" *ngIf="lastName.errors && f.submitted">
+        <div *ngIf="lastName.errors.required">Lastname is required</div>
+        <div *ngIf="lastName.errors.minlength">
+          Lastname must be at least 3 characters
+        </div>
+        <div *ngIf="lastName.errors.maxlength">
+          Lastname must be at most 20 characters
+        </div>
+      </div>
     </div>
     <div class="card-body cardBackground uName">
-      uName
+      <label for="userName">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name="userName"
+        [(ngModel)]="form.userName"
+        required
+        minlength="3"
+        maxlength="20"
+        #userName="ngModel"
+      />
+      <div class="alert-danger" *ngIf="userName.errors && f.submitted">
+        <div *ngIf="userName.errors.required">Username is required</div>
+        <div *ngIf="userName.errors.minlength">
+          Username must be at least 3 characters
+        </div>
+        <div *ngIf="userName.errors.maxlength">
+          Username must be at most 20 characters
+        </div>
+      </div>
     </div>
     <div class="card-body cardBackground eMail">
-      email
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        [(ngModel)]="form.email"
+        required
+        email
+        #email="ngModel"
+      />
+      <div class="alert-danger" *ngIf="email.errors && f.submitted">
+        <div *ngIf="email.errors.required">Email is required</div>
+        <div *ngIf="email.errors.email">
+          Email must be a valid email address
+        </div>
+      </div>
     </div>
     <div class="card-body cardBackground age">
-      age
+      <label for="age">Age</label>
+      <input
+        type="number"
+        class="form-control"
+        name="age"
+        [(ngModel)]="form.age"
+        required
+        #age="ngModel"
+      />
+      <div class="alert-danger" *ngIf="age.errors && f.submitted">
+        <div *ngIf="age.errors.required">Age is required</div>
+      </div>
     </div>
     <div class="card-body cardBackground country">
-      country
+      <label for="country">Country</label>
+      <input
+        type="text"
+        class="form-control"
+        name="country"
+        [(ngModel)]="form.country"
+        required
+        #country="ngModel"
+      />
+      <div class="alert-danger" *ngIf="country.errors && f.submitted">
+        <div *ngIf="country.errors.required">Country is required</div>
+      </div>
     </div>
     <div class="card-body cardBackground state">
-      state
+      <label for="state">State</label>
+      <input
+        type="text"
+        class="form-control"
+        name="state"
+        [(ngModel)]="form.state"
+        required
+        #state="ngModel"
+      />
+      <div class="alert-danger" *ngIf="state.errors && f.submitted">
+        <div *ngIf="state.errors.required">State is required</div>
+      </div>
     </div>
     <div class="card-body cardBackground city">
-      city
+      <label for="city">City</label>
+      <input
+        type="text"
+        class="form-control"
+        name="city"
+        [(ngModel)]="form.city"
+        required
+        #city="ngModel"
+      />
+      <div class="alert-danger" *ngIf="city.errors && f.submitted">
+        <div *ngIf="city.errors.required">City is required</div>
+      </div>
     </div>
     <div class="card-body cardBackground pwd">
-      password
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        [(ngModel)]="form.password"
+        required
+        minlength="6"
+        #password="ngModel"
+      />
+      <div class="alert-danger" *ngIf="password.errors && f.submitted">
+        <div *ngIf="password.errors.required">Password is required</div>
+        <div *ngIf="password.errors.minlength">
+          Password must be at least 6 characters
+        </div>
+      </div>
     </div>
     <div class="card-body cardBackground signUp">
-      Sign Up Button
+      <button class="btn btn-primary btn-block">Sign Up</button>
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Signup failed!<br />{{ errorMessage }}
+        </div>
     </div>
 </form>

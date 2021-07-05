@@ -4,7 +4,11 @@
   width: 100%;
   display: grid;
   align-items: center;
-  padding: 10%;
+  margin: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3%;
+  padding-bottom: 5%;
   grid-gap: 3%;
   grid-template-columns: 1fr;
   grid-template-rows: 0,5fr repeat(4,1fr);
