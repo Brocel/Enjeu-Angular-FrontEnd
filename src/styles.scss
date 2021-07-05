@@ -3,6 +3,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootswatch/dist/materia/bootswatch";
 /*Styles globaux*/
+* {
+  margin: 0;
+}
 body {
   margin: 0;
   padding: 0;
