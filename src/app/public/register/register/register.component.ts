@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { UserService } from '@core/services/user.service';
 
@@ -25,7 +26,10 @@ export class RegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private userService: UserService) { }
 
   ngOnInit(): void {
   }
@@ -47,6 +51,7 @@ export class RegisterComponent implements OnInit {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        this.router.navigate(['/login']);
       },
       err => {
         this.errorMessage = err.error.message;
