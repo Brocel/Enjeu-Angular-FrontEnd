@@ -1,9 +1,9 @@
 .registerGrid {
   height: 90%;
-  width: 70%;
+  width: 100%;
   display: grid;
   align-items: center;
-  padding: 5%;
+  padding: 10%;
   grid-gap: 5%;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 0,5fr repeat(4,1fr);

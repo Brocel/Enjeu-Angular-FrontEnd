@@ -3,18 +3,18 @@
   height: 90%;
   width: 100%;
   display: grid;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: stretch;
   padding: 3%;
   grid-gap: 1%;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 0,5fr 1fr 0,5fr 1fr 0,5fr;
   grid-template-rows: auto;
   grid-template-areas:
-  "ban ban"
-  "logIn register";
+  ". ban ban ban ."
+  ". logIn . register .";
 }
 .ban {
-  width: 50%;
+  width: 100%;
   grid-area: ban;
   justify-content: center;
   justify-self: center;
@@ -22,9 +22,7 @@
 }
 .logIn {
   grid-area: logIn;
-  justify-content: center;
 }
 .register {
   grid-area: register;
-  justify-content: center;
 }

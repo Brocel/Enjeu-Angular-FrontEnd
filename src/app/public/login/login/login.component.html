@@ -1,24 +1,18 @@
-<div class="container loginGrid formBackground">
+<form class="card loginGrid formBackground">
     <h1 class="text-center title">Login</h1>
-    <div class="card cardBackground">
-      <div class="card-body">
-        <form class="form-group">
-          <div class="form-group uName">
-            <label for="username">User Name :</label>
-            <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
-              name="username">
-          </div>
-          <div class="form-group pwd">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
-              name="password">
-          </div>
-          <div class="mess">
-            <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
-            <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
-          </div>
-          <button (click)=handleLogin() class="btn btn-success submitBut">Login</button>
-        </form>
-      </div>
+    <div class="uName card-body cardBackground">
+      <label for="username">User Name :</label>
+      <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name" name="username">
     </div>
-</div>
+    <div class="pwd card-body cardBackground">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password" name="password">
+    </div>
+    <div class="mess card-body cardBackground" *ngIf='invalidLogin'>
+      <div *ngIf='invalidLogin'>{{errorMessage}}</div>
+    </div>
+    <div class="submitBut">
+      <button (click)=handleLogin() class="btn btn-success">Login</button>
+    </div>
+
+</form>
