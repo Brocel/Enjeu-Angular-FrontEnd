@@ -24,7 +24,7 @@ export class UserService {
    state: string,
    city: string,
    password: string): Observable<any> {
-     return this.http.post(URL_API + 'signup', {
+     return this.http.post(URL_API + 'users', {
        firstName,
        lastName,
        userName,
